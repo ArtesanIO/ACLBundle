@@ -1,0 +1,14 @@
+services:
+
+    artesanio.usuarios_provider:
+        class:  ArtesanIO\ACLBundle\Security\UsuariosProvider
+        arguments:
+            - @artesanio.usuarios_manager
+
+    artesanio.encoder:
+        class:  ArtesanIO\ACLBundle\Utils\Encoder
+        arguments:
+            - @security.encoder_factory
+
+    artesanio.sluger_role:
+        class:  ArtesanIO\ACLBundle\Utils\SlugerRole

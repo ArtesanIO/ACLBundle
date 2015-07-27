@@ -1,0 +1,26 @@
+{% extends 'ACLBundle::layout.html.twig' %}
+
+{% block titulo %}Usuario{% endblock %}
+
+
+{% block body %}
+    <form class="form" action="" method="post" novalidate>
+        {{ form_widget(usuario_form) }}
+        <div class="btn-group btn-group-sm">
+            <button type="submit" class="btn btn-default">
+                Guardar
+            </button>
+        </div>
+    </form>
+
+    <form class="form" action="" method="post" novalidate>
+        {{ form_widget(usuario_password_form) }}
+        <div class="btn-group btn-group-sm">
+            <button type="submit" class="btn btn-default">
+                Guardar
+            </button>
+        </div>
+    </form>
+
+
+{% endblock %}

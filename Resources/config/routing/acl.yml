@@ -1,0 +1,35 @@
+usuarios:
+    path:     /usuarios
+    defaults: { _controller: ACLBundle:Usuarios:usuarios }
+
+usuarios_crear:
+    path:     /usuarios/crear
+    defaults: { _controller: ACLBundle:Usuarios:crear }
+
+usuario:
+    path:     /usuario/{id}
+    defaults: { _controller: ACLBundle:Usuarios:usuario }
+
+grupos:
+    path:     /grupos
+    defaults: { _controller: ACLBundle:Grupos:grupos }
+
+grupos_crear:
+    path:     /grupos/crear
+    defaults: { _controller: ACLBundle:Grupos:crear }
+
+grupo:
+    path:     /grupo/{id}
+    defaults: { _controller: ACLBundle:Grupos:grupo }
+
+roles:
+    path:     /roles
+    defaults: { _controller: ACLBundle:Roles:roles }
+
+roles_crear:
+    path:     /roles/crear
+    defaults: { _controller: ACLBundle:Roles:crear }
+
+role:
+    path:     /role/{id}
+    defaults: { _controller: ACLBundle:Roles:role }

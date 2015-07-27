@@ -1,0 +1,49 @@
+{% extends 'ACLBundle::layout.html.twig' %}
+
+{% block titulo %}Grupos{% endblock %}
+{% block botonera %}
+
+<a href="{{ path('grupos_crear') }}" class="btn btn-default">
+    Crear
+</a>
+
+{% endblock %}
+
+{% block body %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Grupo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>#</th>
+            <th>Grupo</th>
+            <th></th>
+        </tr>
+    </tfoot>
+    <tbody>
+        {% for grupo in grupos %}
+        <tr>
+            <td>{{ grupo.id }}</td>
+            <td>{{ grupo.grupo }}</td>
+            <td>
+                <div class="btn-group">
+                    <a href="{{ path('grupo', {id: grupo.id }) }}" class="btn btn-default">
+                        Ver
+                    </a>
+                    <button type="button" class="btn btn-default">
+                        Eliminar
+                    </button>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}

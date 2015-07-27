@@ -1,0 +1,21 @@
+services:
+
+    artesanio.usuarios_manager:
+        class: ArtesanIO\ACLBundle\Model\UsuariosManager
+        arguments:
+            - @doctrine.orm.entity_manager
+            - ArtesanIO\ACLBundle\Entity\Usuarios
+            - @artesanio.encoder
+
+    artesanio.grupos_manager:
+        class: ArtesanIO\ACLBundle\Model\GruposManager
+        arguments:
+            - @doctrine.orm.entity_manager
+            - ArtesanIO\ACLBundle\Entity\Grupos
+
+    artesanio.roles_manager:
+        class: ArtesanIO\ACLBundle\Model\RolesManager
+        arguments:
+            - @doctrine.orm.entity_manager
+            - ArtesanIO\ACLBundle\Entity\Roles
+            - @artesanio.sluger_role

@@ -1,0 +1,10 @@
+acl:
+    resource: "@ACLBundle/Resources/config/routing/acl.yml"
+    prefix: /acl
+
+login:
+    pattern:   /login
+    defaults:  { _controller: ACLBundle:Security:login }
+
+login_check:
+    pattern:   /login_check

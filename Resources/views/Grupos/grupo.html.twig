@@ -1,0 +1,51 @@
+{% extends 'ACLBundle::layout.html.twig' %}
+
+{% block titulo %}Grupo{% endblock %}
+
+
+{% block body %}
+    <form class="form" action="" method="post" novalidate>
+        {{ form_widget(grupo_form) }}
+        <div class="btn-group btn-group-sm">
+            <button type="submit" class="btn btn-default">
+                Guardar
+            </button>
+        </div>
+    </form>
+
+    <form class="" action="" method="post" novalidate>
+
+        {{ form_row(grupo_roles_form._token) }}
+
+        {% macro prototype(roles) %}
+            <tr>
+                <td>
+                    {{ form_widget(roles.roles) }}
+                </td>
+                <td>
+                    <button type="button" class="btn btn-default btn-delete">
+                        Eliminar
+                    </button>
+                </td>
+            </tr>
+        {% endmacro %}
+
+        <table>
+            <tbody class="collections" data-prototype="{{ _self.prototype(grupo_roles_form.roles.vars.prototype)|e }}">
+                <tr>
+                    {% for roles in grupo_roles_form.roles %}
+                      {{_self.prototype(roles)}}
+                   {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-default">
+            Guardar
+        </button>
+
+        <button type="button" class="btn btn-default btn-add">
+            Add
+        </button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'ACLBundle::layout.html.twig' %}
+
+{% block titulo %}Roles{% endblock %}
+{% block botonera %}
+
+<a href="{{ path('roles_crear') }}" class="btn btn-default">
+    Crear
+</a>
+
+{% endblock %}
+
+{% block body %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Role</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>#</th>
+            <th>Role</th>
+            <th></th>
+        </tr>
+    </tfoot>
+    <tbody>
+        {% for role in roles %}
+        <tr>
+            <td>{{ role.id }}</td>
+            <td>{{ role.role }}</td>
+            <td>
+                <div class="btn-group">
+                    <a href="{{ path('role', {id: role.id }) }}" class="btn btn-default">
+                        Ver
+                    </a>
+                    <button type="button" class="btn btn-default">
+                        Eliminar
+                    </button>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}

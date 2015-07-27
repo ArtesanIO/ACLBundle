@@ -1,0 +1,25 @@
+services:
+    artesanio.usuarios_type:
+        class: ArtesanIO\ACLBundle\Form\UsuariosType
+        tags:
+            - { name: form.type, alias: artesanio_acl_usuarios }
+
+    artesanio.usuarios_password_type:
+        class: ArtesanIO\ACLBundle\Form\UsuariosPasswordType
+        tags:
+            - { name: form.type, alias: artesanio_acl_usuarios_password }
+
+    artesanio.grupos_type:
+        class: ArtesanIO\ACLBundle\Form\GruposType
+        tags:
+            - { name: form.type, alias: artesanio_acl_grupos }
+
+    artesanio.grupo_roles_type:
+        class: ArtesanIO\ACLBundle\Form\GrupoRolesType
+        tags:
+            - { name: form.type, alias: artesanio_acl_grupo_roles }
+
+    artesanio.roles_type:
+        class: ArtesanIO\ACLBundle\Form\RolesType
+        tags:
+            - { name: form.type, alias: artesanio_acl_roles }
