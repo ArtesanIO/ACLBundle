@@ -30,13 +30,13 @@
         <tr>
             <td>{{ grupo.id }}</td>
             <td>{{ grupo.grupo }}</td>
-            <td>
+            <td class="text-right">
                 <div class="btn-group">
                     <a href="{{ path('grupo', {id: grupo.id }) }}" class="btn btn-default">
-                        Ver
+                        <span class="glyphicon glyphicon-edit"></span>
                     </a>
                     <button type="button" class="btn btn-default">
-                        Eliminar
+                        <span class="glyphicon glyphicon-trash"></span>
                     </button>
                 </div>
             </td>

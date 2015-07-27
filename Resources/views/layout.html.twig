@@ -3,29 +3,29 @@
     <head>
         <meta charset="utf-8">
         <title>ArtesanIO - ACLBundle</title>
+        <link rel="stylesheet" href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}" media="screen" title="no title" charset="utf-8">
     </head>
     <body>
 
         <div class="panel panel-default">
             <div class="panel-body">
-                {% include 'ACLBundle::includes/acl-navbar.html.twig' %}
-            </div>
-        </div>
-
-        <div class="page-header">
-            <h1>{% block titulo %}{% endblock %}</h1>
-        </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="btn-group">
-                  {% block botonera %}{% endblock %}
+                <div class="page-header">
+                    <h1>{% block titulo %}{% endblock %}</h1>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="btn-group">
+                            {% include 'ACLBundle::includes/acl-navbar.html.twig' %}
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        {% block body %}{% endblock %}
+                    </div>
                 </div>
             </div>
-            <div class="panel-body">
-                {% block body %}{% endblock %}
-            </div>
         </div>
+
+
 
     <script src="{{ asset('js/jquery.min.js') }}" charset="utf-8"></script>
     <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>
