@@ -1,11 +1,11 @@
 {
-  "name": "artesan-io/acl-bundle",
-  "type": "symfony-bundle",
-  "description": "ACLBundle",
-  "keywords": ["sms", "sms api", "bundle sms"],
-  "homepage": "https://www.cristianangulo.com",
-  "license": "MIT",
-  "autoload": {
-      "psr-4": { "ArtesanIO\\ACLBundle\\": "" }
-  }
+    "name": "artesan-io/acl-bundle",
+    "type": "symfony-bundle",
+    "description": "ACLBundle",
+    "keywords": ["Users", "ACL", "Security", "artesanIO"],
+    "homepage": "https://www.cristianangulo.com",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": { "ArtesanIO\\ACLBundle\\": "" }
+    }
 }
